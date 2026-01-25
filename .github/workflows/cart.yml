@@ -35,5 +35,5 @@ jobs:
 
       - name: Docker Push
         run: |
-          docker tag cart ${name}/cart:latest
-          docker push ${name}/cart:latest
+          docker tag robot-shop:latest sharnithacr/robot-shop:${{ github.run_id }}
+          docker push sharnithacr/robot-shop:${{ github.run_id }}
