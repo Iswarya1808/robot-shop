@@ -28,11 +28,11 @@ jobs:
       - name: Build Docker image
         run: |
           cd cart/
-          docker build -t sharnithacr/robot-shop:${{ github.run_id }} .
+          docker build -t sharnithacr.azurecr.io/robot-shop:${{ github.run_id }} .
 
       - name: Docker Login
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login sharnithacr.azurecr.io -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
 
       - name: Docker Push
         run: |
-          docker push sharnithacr/robot-shop:${{ github.run_id }}
+          docker push sharnithacr.azurecr.io/robot-shop:${{ github.run_id }}
