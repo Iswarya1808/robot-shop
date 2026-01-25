@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - master
-    paths:
-      - '**.js'
-      - '.github/workflows/cart.yaml'
+    # paths:
+    #   - '**.js'
+    #   - '.github/workflows/cart.yaml'
 
   pull_request:
     branches:
