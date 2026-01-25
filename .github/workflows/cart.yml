@@ -31,7 +31,7 @@ jobs:
           docker build -t sharnithacr/robot-shop:${{ github.run_id }} .
 
       - name: Docker Login
-        run: echo "${{ secrets.ACR_PASSWORD }}" | docker login sharnithacr.azurecr.io -u ${{ secrets.ACR_USERNAME }} --password-stdin
+        run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login sharnithacr.azurecr.io -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
 
       - name: Docker Push
         run: |
