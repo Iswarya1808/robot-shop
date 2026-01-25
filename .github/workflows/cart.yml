@@ -27,6 +27,7 @@ jobs:
 
       - name: Build Docker image
         run: |
+          cd cart/
           docker build -t cart .
 
       - name: Docker Login (use secrets)
