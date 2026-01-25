@@ -28,12 +28,11 @@ jobs:
       - name: Build Docker image
         run: |
           cd cart/
-          docker build -t cart .
+          docker build -t sharnithacr/robot-shop:${{ github.run_id }} .
 
-      - name: Docker Login (use secrets)
+      - name: Docker Login
         run: docker login sharnithacr.azurecr.io -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Docker Push
         run: |
-          docker tag cart sharnithacr/robot-shop:${{ github.run_id }}
           docker push sharnithacr/robot-shop:${{ github.run_id }}
