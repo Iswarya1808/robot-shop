@@ -2,7 +2,7 @@ name: docker-compose-actions-workflow
 on:
   push:
     branches:
-      - 'master'
+      - 'master1'
     paths-ignore:
       - 'DCOS/**'
       - 'K8s/**'
