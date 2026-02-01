@@ -143,4 +143,5 @@ If you are running it locally on a Linux host you can also run the Instana [agen
 There is also only limited support on ARM architectures at the moment.
 
 ## Contact & Support
-If you have questions about the configuration, feel free to open an issue or reach out via LinkedIn. [www.linkedin.com/in/sharnitha-vijayakumar-b124701a7]
+If you have questions about the configuration, feel free to open an issue or reach out via LinkedIn. 
+www.linkedin.com/in/sharnitha-vijayakumar-b124701a7
