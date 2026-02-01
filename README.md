@@ -98,6 +98,9 @@ Access the following tools to monitor the communications
 * Container Scanning: Every image is scanned by Trivy before being allowed into the ACR.
 * SAST: SonarCloud gates ensure no technical debt or secrets are committed to the repositary.
 
+##  CICD Architecture Diagram
+<img width="1024" height="1536" alt="A professional CI_CD" src="https://github.com/user-attachments/assets/ab2f4cd4-1d24-4245-82aa-794e5c0b573b" />
+
 ## Running Locally
 
 To download the tracing module for Nginx, it needs a valid Instana agent key. Set this in the environment before starting the build.
