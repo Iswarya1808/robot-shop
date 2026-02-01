@@ -36,11 +36,15 @@ Before starting, ensure you have:
 Login to the Azure and Create the base resources:
 
 ```shell
-$ az group create --name RobotShopRG --location eastus # created Resource Group
-$ az acr create --resource-group RobotShopRG --name <ACRname> --sku Standard # creating Container Registry
+$ az group create --name RobotShopRG --location eastus # Created Resource Group
+$ az acr create --resource-group RobotShopRG --name <ACRname> --sku Standard # Creating Container Registry
 
 # Creating AKS Cluster
 $ az aks create --resource-group RobotShopRG --name RobotShopekscluster --node-count 3 --generate-ssh-key --attach-acr <ACRname>
+
+#Initial Helm deployment
+$ helm install myapp ./k8s/helm
+$ helm upgrade --install myapp ./k8s/helm  # if you already have a release.
 ```
 2. CI/CD Pipeline Flow
    
@@ -139,4 +143,4 @@ If you are running it locally on a Linux host you can also run the Instana [agen
 There is also only limited support on ARM architectures at the moment.
 
 ## Contact & Support
-If you have questions about the configuration, feel free to open an issue or reach out via LinkedIn.
+If you have questions about the configuration, feel free to open an issue or reach out via LinkedIn. [www.linkedin.com/in/sharnitha-vijayakumar-b124701a7]
